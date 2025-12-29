@@ -15,7 +15,8 @@ function Header() {
       <h2 style={styles.logo}>AutoParts Store</h2>
 
       <nav>
-        <Link to="/" style={styles.link}>Home</Link>
+        {/* FIX: Home must NOT point to "/" when using HashRouter */}
+        <Link to="/home" style={styles.link}>Home</Link>
         <Link to="/products" style={styles.link}>Products</Link>
         <Link to="/cart" style={styles.link}>Cart</Link>
 
