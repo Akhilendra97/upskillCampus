@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Home() {
   return (
-    <>
+    <div>
       <div className="fk-banner">
         <div>
           <h1>Automotive Parts Store</h1>
@@ -27,7 +27,7 @@ function Home() {
           <div className="fk-category-card">Car Accessories</div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

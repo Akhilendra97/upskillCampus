@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 
 import Header from "./components/Header";
 
@@ -18,7 +18,18 @@ import AdminDashboard from "./pages/AdminDashboard";
 import AdminProducts from "./pages/AdminProducts";
 
 function App() {
-  const isAdminRoute = window.location.pathname.startsWith("/admin");
+  const location = useLocation();
+  const isAdminRoute = location.pathname.startsWith("/admin");
+
+  // ✅ FORCE HOME RENDER ON INITIAL LOAD
+  if (location.pathname === "/") {
+    return (
+      <div>
+        {!isAdminRoute && <Header />}
+        <Home />
+      </div>
+    );
+  }
 
   return (
     <div>
@@ -27,7 +38,7 @@ function App() {
 
       <Routes>
         {/* User Routes */}
-        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/products" element={<Products />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
