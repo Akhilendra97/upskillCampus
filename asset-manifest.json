@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/upskillCampus/static/css/main.549b9c8f.css",
+    "main.js": "/upskillCampus/static/js/main.5ed463d8.js",
+    "index.html": "/upskillCampus/index.html",
+    "main.549b9c8f.css.map": "/upskillCampus/static/css/main.549b9c8f.css.map",
+    "main.5ed463d8.js.map": "/upskillCampus/static/js/main.5ed463d8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.549b9c8f.css",
+    "static/js/main.5ed463d8.js"
+  ]
+}
